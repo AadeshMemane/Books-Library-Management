@@ -37,4 +37,12 @@ describe('Library Management System', function () {
     library.borrowBook('17895')
     expect(() => library.borrowBook('17895')).toThrow('Book is not available.')
   })
+
+  //test 5
+  test('Should allow returning a borrowed book', function () {
+    library.addBook('12345', 'Ikigai', 'Hector Garcia', 2023)
+    library.borrowBook('12345')
+    library.returnBook('12345')
+    expect(library.books[0].available).toBe(true)
+  })
 })
