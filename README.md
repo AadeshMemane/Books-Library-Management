@@ -61,6 +61,23 @@ This project is a simple Library Management System implemented in JavaScript, us
    console.log(library.viewAvailableBooks())
    ```
 
+3. **Test Results**:
+
+test/book.test.js
+Library Management System
+√ Should add a new book (3 ms)
+√ Should allow borrowing an available book
+√ Should not allow borrowing a book that does not exist (27 ms)  
+ √ Should not allow borrowing an unavailable book (1 ms)  
+ √ Should allow returning a borrowed book (1 ms)  
+ √ Should not allow returning a book that does not exist (1 ms)  
+ √ Should view only available books  
+Test Suites: 1 passed, 1 total  
+Tests: 7 passed, 7 total  
+Snapshots: 0 total
+Time: 1.037 s
+Ran all test suites.
+
 ## Git Workflow
 
 1. Initialize the Git repository:
