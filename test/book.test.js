@@ -1,3 +1,5 @@
+const Library = require('../src/book')
+
 describe('Library Management System', function () {
   let library
 
