@@ -45,4 +45,9 @@ describe('Library Management System', function () {
     library.returnBook('12345')
     expect(library.books[0].available).toBe(true)
   })
+
+  //test 6
+  test('Should not allow returning a book that does not exist', function () {
+    expect(() => library.returnBook('96348')).toThrow('Book not found.')
+  })
 })
