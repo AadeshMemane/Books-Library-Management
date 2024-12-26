@@ -25,4 +25,9 @@ describe('Library Management System', function () {
     library.borrowBook('12345')
     expect(library.books[0].available).toBe(false)
   })
+
+  //test 3
+  test('Should not allow borrowing a book that does not exist', function () {
+    expect(() => library.borrowBook('97985')).toThrow('Book not found.')
+  })
 })
