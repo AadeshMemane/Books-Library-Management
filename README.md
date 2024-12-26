@@ -57,7 +57,7 @@ This project is a simple Library Management System implemented in JavaScript, us
    const Library = require('./book')
 
    const library = new Library()
-   library.addBook('123', 'Book Title', 'Author Name', 2023)
+   library.addBook('12345', 'Ikigai', 'Hector Garcia', 2010)
    console.log(library.viewAvailableBooks())
    ```
 
@@ -74,5 +74,5 @@ This project is a simple Library Management System implemented in JavaScript, us
 3. Push the code to a remote repository:
    ```bash
    git remote add origin https://github.com/AadeshMemane/Books-Library-Management.git
-   git push -u origin master
+   git push -u origin main
    ```
