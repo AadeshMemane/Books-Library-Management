@@ -19,6 +19,9 @@ Library.prototype.borrowBook = function (isbn) {
   if (!book) {
     throw new Error('Book not found.')
   }
+  if (!book.available) {
+    throw new Error('Book is not available.')
+  }
   book.available = false
 }
 
