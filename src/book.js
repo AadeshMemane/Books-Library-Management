@@ -34,4 +34,9 @@ Library.prototype.returnBook = function (isbn) {
   book.available = true
 }
 
+//Function for viewing all available books
+Library.prototype.viewAvailableBooks = function () {
+  return this.books.filter((book) => book.available)
+}
+
 module.exports = Library
