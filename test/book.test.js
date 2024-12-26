@@ -50,4 +50,21 @@ describe('Library Management System', function () {
   test('Should not allow returning a book that does not exist', function () {
     expect(() => library.returnBook('96348')).toThrow('Book not found.')
   })
+
+  //test 7
+  test('Should view only available books', function () {
+    library.addBook('89456', 'Today', 'Sahil T', 2005)
+    library.addBook('45686', 'Business Talk', 'Ambar T', 2012)
+    library.borrowBook('89456')
+    const availableBooks = library.viewAvailableBooks()
+    expect(availableBooks).toEqual([
+      {
+        isbn: '45686',
+        title: 'Business Talk',
+        author: 'Ambar T',
+        year: 2012,
+        available: true,
+      },
+    ])
+  })
 })
