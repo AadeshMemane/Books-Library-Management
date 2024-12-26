@@ -28,6 +28,9 @@ Library.prototype.borrowBook = function (isbn) {
 //Function for returning a borrowed book
 Library.prototype.returnBook = function (isbn) {
   const book = this.books.find((book) => book.isbn === isbn)
+  if (!book) {
+    throw new Error('Book not found.')
+  }
   book.available = true
 }
 
