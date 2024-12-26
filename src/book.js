@@ -13,4 +13,10 @@ Library.prototype.addBook = function (isbn, title, author, year) {
   })
 }
 
+//Function for borrowing a available book
+Library.prototype.borrowBook = function (isbn) {
+  const book = this.books.find((book) => book.isbn === isbn)
+  book.available = false
+}
+
 module.exports = Library
