@@ -18,4 +18,11 @@ describe('Library Management System', function () {
       available: true,
     })
   })
+
+  //test 2
+  test('Should allow borrowing an available book', function () {
+    library.addBook('12345', 'Ikigai', 'Hector Garcia', 2010)
+    library.borrowBook('12345')
+    expect(library.books[0].available).toBe(false)
+  })
 })
